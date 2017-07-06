@@ -1,7 +1,7 @@
 
 ## SoundServe API Documentation ##
 
-###**Library Management**###
+### **Library Management** ###
 
 ----------
 
@@ -40,13 +40,10 @@ Get a list of all the directories being served to the client, add a directory to
         * Content:  
     ```json
     {
-        "numberOfDirs" : <int>,
+        "numberOfDirs" : "number of directories being served",
         "dirs" : [
             "<absolute path to dir 1>",
-            "<absolute oath to dir 2>",
-            .
-            .
-            .
+            "<absolute oath to dir 2>"
         ]
     }
     ```
@@ -71,7 +68,7 @@ Get a list of all the directories being served to the client, add a directory to
 <br />
 <br />
 
-###**Get All Albums**###
+### **Get All Albums** ###
 
 ----------
 
@@ -96,10 +93,10 @@ Get a list of all the albums and their artwork currently in the music library.
     * Content:  
     ```json
     {
-        "numberOfAlbums" : <int>,
+        "numberOfAlbums" : "number of albums in library",
         "albums" : [
             {
-                "albumId" : <album uid>,
+                "albumId" : "<album uid>",
                 "albumName" : "<name of album>",
                 "albumArtist" : "<album artist>",
                 "albumArt" : {
@@ -108,10 +105,7 @@ Get a list of all the albums and their artwork currently in the music library.
                     "extraLarge" : "<url to 300x300 album art>",
                     "mega" : "<url to 600x600 album art>"
                 }
-            },
-            .
-            .
-            .
+            }
         ]
     }
     ```
@@ -122,7 +116,7 @@ TBD
 <br />
 <br />
 
-###**Get All Artists**###
+### **Get All Artists** ###
 
 ----------
 
@@ -147,10 +141,10 @@ Get a list of all the artists and their image currently in the music library.
     * Content:  
     ```json
     {
-        "numberOfArtists" : <int>,
+        "numberOfArtists" : "<number of artists in library>",
         "artists": [
             {
-                "artistId" : <artist uid>,
+                "artistId" : "<artist uid>",
                 "artistName" : "<name of artist>",
                 "artistArt" : {
                     "medium" : "<url to 64x64 artist art>",
@@ -158,10 +152,7 @@ Get a list of all the artists and their image currently in the music library.
                     "extraLarge" : "<url to 300x300 artist art>",
                     "mega" : "<url to 600x600 artist art>"
                 }
-            },
-            .
-            .
-            .
+            }
         ]
     }
     ```
@@ -173,7 +164,7 @@ TBD
 <br />
 <br />
 
-###**Get All Songs in a Specific Album**###
+### **Get All Songs in a Specific Album** ###
 
 ----------
 
@@ -198,16 +189,13 @@ Get a list of all the songs in a given album by an album uid which is returned b
     * Content:  
     ```json
     {
-        "numberOfSongs" : <int>,
+        "numberOfSongs" : "number of songs in album",
         "songs": [
             {
-                "songId" : <song uid>,
+                "songId" : "<song uid>",
                 "songName" : "<name of song>",
                 "songDuration" : "<duration of song in format 1:23>"
-            },
-            .
-            .
-            .
+            }
         ]
     }
     ```
@@ -219,7 +207,7 @@ TBD
 <br />
 <br />
 
-###**Get All Songs from a Specific Artist**###
+### **Get All Songs from a Specific Artist** ###
 
 ----------
 
@@ -244,16 +232,13 @@ Get a list of all the songs from a given artist by an artist uid which is return
     * Content:  
     ```json
     {
-        "numberOfSongs" : <int>,
+        "numberOfSongs" : "number of songs by artist",
         "songs": [
             {
-                "songId" : <song uid>,
+                "songId" : "<song uid>",
                 "songName" : "<name of song>",
                 "songDuration" : "<duration of song in format 1:23>"
-            },
-            .
-            .
-            .
+            }
         ]
     }
     ```
@@ -265,7 +250,7 @@ TBD
 <br />
 <br />
 
-###**Get the .mp3 File for a Specific Song**###
+### **Get the .mp3 File for a Specific Song** ###
 
 ----------
 
