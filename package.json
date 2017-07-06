@@ -1,6 +1,6 @@
 {
-  "name": "songserve",
-  "version": "1.0.0",
+  "name": "song-serve",
+  "version": "1.0.1",
   "description": "A local music server",
   "main": "server.js",
   "scripts": {
