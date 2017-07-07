@@ -5,6 +5,10 @@
 
 ----------
 
+
+----------
+
+
 Get a list of all the directories being served to the client, add a directory to be served to the client, remove a directory from being served to the client
 
 ----------

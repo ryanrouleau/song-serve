@@ -9,6 +9,8 @@
   "author": "Ryan Rouleau",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "walk": "^2.3.9"
   }
 }
