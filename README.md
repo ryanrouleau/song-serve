@@ -5,10 +5,6 @@
 
 ----------
 
-
-----------
-
-
 Get a list of all the directories being served to the client, add a directory to be served to the client, remove a directory from being served to the client
 
 ----------
@@ -20,7 +16,7 @@ Get a list of all the directories being served to the client, add a directory to
   
   `GET`|`PUT`|`DELETE`
 
-* **Data Params**
+* **Expected Request Body**
     * **GET**
     ```
     n/a
@@ -40,8 +36,8 @@ Get a list of all the directories being served to the client, add a directory to
 
 * **Success Response:**
   * **GET**
-        * Response Code: 200
-        * Content:  
+       * Response Code: 200
+       * Content:  
     ```json
     {
         "numberOfDirs" : "number of directories being served",
@@ -87,7 +83,7 @@ Get a list of all the albums and their artwork currently in the music library.
   
   `GET`
 
-* **Data Params**
+* **Expected Request Body**
     ```
     n/a
     ```
@@ -135,7 +131,7 @@ Get a list of all the artists and their image currently in the music library.
   
   `GET`
 
-* **Data Params**
+* **Expected Request Body**
     ```
     n/a
     ```
@@ -183,7 +179,7 @@ Get a list of all the songs in a given album by an album uid which is returned b
   
   `GET`
 
-* **Data Params**
+* **Expected Request Body**
     ```
     n/a
     ```
@@ -226,7 +222,7 @@ Get a list of all the songs from a given artist by an artist uid which is return
   
   `GET`
 
-* **Data Params**
+* **Expected Request Body**
     ```
     n/a
     ```
@@ -269,7 +265,7 @@ Get the .mp3 file from a given song uid which is given from either the */api/alb
   
   `GET`
 
-* **Data Params**
+* **Expected Request Body**
     ```
     n/a
     ```
