@@ -1,7 +1,7 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
     apiRouter = require('./api/apiRouter'),
-    verbose = require('./lib/verbose')
+    verbose = require('./lib/verbose'),
     app = express();
 
 app.use(bodyParser.json());
