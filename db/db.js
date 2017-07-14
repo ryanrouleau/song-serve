@@ -1,8 +1,8 @@
 const sqlite3 = require('sqlite3'),
-  db = new sqlite3.Database('db.sqlite3');
+  db = new sqlite3.Database('./db/db.sqlite3');
 
 // create tables if they don't exist yet
-db.serialize(function() {
+db.serialize(() => {
   let createSongsTable = `
     CREATE TABLE IF NOT EXISTS songs (
       name TEXT,
@@ -12,18 +12,21 @@ db.serialize(function() {
       artistId TEXT,
       year TEXT,
       filePath TEXT,
-      dirId TEXT,
-      artLrg TEXT,
-      artExtrLrg TEXT,
-      artMega TEXT
+      dirId TEXT
     )`;
   let createAlbumTable = `
     CREATE TABLE IF NOT EXISTS albums (
-      name TEXT
+      name TEXT,
+      albumArtist TEXT,
+      artSmall TEXT,
+      artLarge TEXT,
+      artMega TEXT,
+      dirId TEXT
     )`;
   let createArtistTable = `
     CREATE TABLE IF NOT EXISTS artists (
-      name TEXT
+      name TEXT,
+      dirId TEXT
     )`;
   let createDirTable = `
     CREATE TABLE IF NOT EXISTS dirs (
@@ -37,7 +40,7 @@ db.serialize(function() {
     createDirTable
   ];
 
-  creationQueries.forEach( (query) => {
+  creationQueries.forEach(query => {
     db.run(query, (err) => {
       if (err) console.log(err);
     });

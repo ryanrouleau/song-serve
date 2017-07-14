@@ -11,7 +11,7 @@ router.put('/', (req, res) => {
     res.send(responseToClient);
   })
   .catch(err => {
-    res.send(err);
+    res.send(`${err}\n`);
   });
 });
 

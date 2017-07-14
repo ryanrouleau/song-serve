@@ -28,6 +28,9 @@ app.get('/', (req, res) => {
 // all api routes are handled by /api/router.js
 app.use('/api', apiRouter);
 
-app.listen(3000, () => {
+const server = app.listen(3000, () => {
   console.log('SoundServe listening on port 3000...')
 });
+
+// set http timeout to 30 minutes for long dir adding
+server.timeout = 1800000;
