@@ -26,6 +26,9 @@ db.serialize(() => {
   let createArtistTable = `
     CREATE TABLE IF NOT EXISTS artists (
       name TEXT,
+      artSmall TEXT,
+      artLarge TEXT,
+      artMega TEXT,
       dirId TEXT
     )`;
   let createDirTable = `

@@ -1,9 +1,18 @@
 const router = require('express').Router(),
   verbose = require('../lib/verbose'),
-  addDirectory = require('../lib/add-directory');
+  getLibraryInfo = require('../lib/get-library-info'),
+  addDirectory = require('../lib/add-directory'),
+  removeDirectory = require('../lib/remove-directory');
 
 router.get('/', (req, res) => {
-  res.send(`${req.method} -> ${req.baseUrl}`);
+  getLibraryInfo().then(responseToClient => {
+    res.send(responseToClient);
+  })
+  .catch(err => {
+    res.send({
+      err: err.message
+    })
+  })
 });
 
 router.put('/', (req, res) => {
@@ -11,12 +20,21 @@ router.put('/', (req, res) => {
     res.send(responseToClient);
   })
   .catch(err => {
-    res.send(`${err}\n`);
+    res.send({
+      err: err.message
+    });
   });
 });
 
 router.delete('/', (req, res) => {
-  res.send(`${req.method} -> ${req.baseUrl} -> delete ${req.body.absolutePath}`);
+  removeDirectory(req).then(responseToClient => {
+    res.send(responseToClient);
+  })
+  .catch(err => {
+    res.send({
+      err: err.message
+    })
+  })
 });
 
 module.exports = router;
