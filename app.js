@@ -2,9 +2,12 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   apiRouter = require('./api/api-router'),
   verbose = require('./lib/verbose'),
+  cors = require('cors'),
   app = express();
 
 app.use(bodyParser.json());
+app.use(cors())
+app.options('*', cors());
 
 // intercept all requests and print request to console if verbose
 app.all('/*', (req, res, next) => {

@@ -12,6 +12,7 @@ router.use('/artists', require('./artists.js'));
 router.use('/artist', require('./artist.js'));
 
 // song routes
+router.use('/songs', require('./songs.js'));
 router.use('/song', require('./song.js'));
 
 module.exports = router;

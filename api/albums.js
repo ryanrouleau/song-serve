@@ -1,6 +1,7 @@
 const router = require('express').Router(),
   db = require('../db/db.js');
 
+
 router.get('/', (req, res) => {
   genAlbumsResponse().then(responseToClient => {
     res.send(responseToClient);
@@ -11,6 +12,7 @@ router.get('/', (req, res) => {
     });
   });
 });
+
 
 const genAlbumsResponse = () => {
   return new Promise((resolve, reject) => {
