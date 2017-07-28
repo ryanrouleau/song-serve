@@ -21,6 +21,12 @@ db.serialize(() => {
       artSmall TEXT,
       artLarge TEXT,
       artMega TEXT,
+      vibrant TEXT,
+      lightVibrant TEXT,
+      darkVibrant TEXT,
+      muted TEXT,
+      lightMuted TEXT,
+      darkMuted TEXT,
       dirId TEXT
     )`;
   let createArtistTable = `
@@ -29,6 +35,12 @@ db.serialize(() => {
       artSmall TEXT,
       artLarge TEXT,
       artMega TEXT,
+      vibrant TEXT,
+      lightVibrant TEXT,
+      darkVibrant TEXT,
+      muted TEXT,
+      lightMuted TEXT,
+      darkMuted TEXT,
       dirId TEXT
     )`;
   let createDirTable = `
