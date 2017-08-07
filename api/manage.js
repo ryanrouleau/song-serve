@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
   })
   .catch(err => {
     res.send({
-      err: err.message
+      err: err
     })
   })
 });
@@ -21,7 +21,7 @@ router.put('/', (req, res) => {
   })
   .catch(err => {
     res.send({
-      err: err.message
+      err: err
     });
   });
 });
@@ -32,7 +32,7 @@ router.delete('/', (req, res) => {
   })
   .catch(err => {
     res.send({
-      err: err.message
+      err: err
     })
   })
 });

@@ -4,6 +4,7 @@ const express = require('express'),
   verbose = require('./lib/verbose'),
   spotify = require('./lib/spotify-api'),
   cors = require('cors'),
+  opn = require('opn');
   app = express();
 
 process.argv.forEach( val => {
@@ -17,6 +18,11 @@ app.use(bodyParser.json());
 app.use(cors())
 app.options('*', cors());
 
+opn('http://localhost:3000/')
+
+// serve web player at root
+app.use('/', express.static('public'));
+
 // intercept all requests and print request to console if verbose
 app.all('/*', (req, res, next) => {
   if (verbose) {
@@ -25,16 +31,6 @@ app.all('/*', (req, res, next) => {
   next();
 });
 
-// root route is handled here
-app.get('/', (req, res) => {
-  res.send(`
-    <br />
-    <h1>yoooo!!! shiieeeeet you at the root bro!!!</1>
-    <br />
-    <br />
-    <h2>the front end static files will be served here</h2>
-  `);
-});
 
 // all api routes are handled by /api/router.js
 app.use('/api', apiRouter);
