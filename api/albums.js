@@ -50,6 +50,7 @@ const genAlbumsResponse = () => {
           if (nameA > nameB) return 1;
           return 0;
         });
+        responseToClient.albums.splice(0,2);
         return resolve(responseToClient);
       });
     });
