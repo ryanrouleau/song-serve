@@ -1,6 +1,26 @@
+# Song Serve
 
-## SoundServe API Documentation ##
+A node server for creating, interacting with, and serving a music library by scanning local directories for .mp3 files.
 
+See [song-serve-frontend](https://github.com/ryanrouleau/song-serve-frontend) for the library management and Vue.js music player frontends.
+
+## Building and Running ##
+
+```bash
+
+# install dependencies
+npm install
+
+# run server
+node app.js <spotify client id> <spotify client secret> <optional --verbose || -v>
+```
+
+Spotify credentials are for getting extra metadata and album/artist art from Spotify's API.  To get these keys, navgate to [developer.spotify.com](https://developer.spotify.com/) and create a new or use an exisisting application.
+
+By default, the music player will open automatically in your default browser.
+
+## API Documentation ##
+### !!API docs are currently outdated!! ###
 ### **Library Management** ###
 
 ----------
