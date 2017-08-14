@@ -26,7 +26,7 @@ app.use('/', express.static('public'));
 // intercept all requests and print request to console if verbose
 app.all('/*', (req, res, next) => {
   if (verbose) {
-    console.log(`method: ${req.method} -> route: ${req.url} -> body: ${req.body}`);
+    console.log(`method: ${req.method} -> route: ${req.url} -> body: ${JSON.stringify(req.body)}`);
   }
   next();
 });
