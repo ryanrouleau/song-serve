@@ -15,9 +15,9 @@ npm install
 node app.js <spotify client id> <spotify client secret> <optional --verbose || -v>
 ```
 
-Spotify credentials are for getting extra metadata and album/artist art from Spotify's API.  To get these keys, navgate to [developer.spotify.com](https://developer.spotify.com/) and create a new or use an exisisting application.
+Spotify credentials are used to gather extra metadata and album/artist art from Spotify's API.  To get these keys, navgate to [developer.spotify.com](https://developer.spotify.com/) and create a new or use an exisisting application.
 
-By default, the music player will open automatically in your default browser.
+By default, the Vue.js music player and API are served at http://localhost:3000 and http://localhost:3000/api/ respectively.
 
 ## API Documentation ##
 ### !!API docs are currently outdated!! ###
